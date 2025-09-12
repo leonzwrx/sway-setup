@@ -39,11 +39,16 @@ This setup works on both **Debian** and **Fedora**:
 The actual configs live in my [dotfiles repo](https://github.com/leonzwrx/dotfiles).  
 Here are the most relevant folders for this setup:
 
-- [`.config/sway`](https://github.com/leonzwrx/dotfiles/tree/main/.config/sway)  
-- [`.config/waybar`](https://github.com/leonzwrx/dotfiles/tree/main/.config/waybar)  
-- [`.config/swayidle`](https://github.com/leonzwrx/dotfiles/tree/main/.config/swayidle)  
-- [`.config/swaylock`](https://github.com/leonzwrx/dotfiles/tree/main/.config/swaylock)  
-- [`.config/gtklock`](https://github.com/leonzwrx/dotfiles/tree/main/.config/gtklock)  
+- [`.config/gtklock`](https://github.com/leonzwrx/dotfiles/tree/master/.config/gtklock)  
+- [`.config/mako`](https://github.com/leonzwrx/dotfiles/tree/master/.config/mako)  
+- [`.config/nwg-bar`](https://github.com/leonzwrx/dotfiles/tree/master/.config/nwg-bar)  
+- [`.config/nwg-wrapper`](https://github.com/leonzwrx/dotfiles/tree/master/.config/nwg-wrapper)  
+- [`.config/rofi`](https://github.com/leonzwrx/dotfiles/tree/master/.config/rofi)  
+- [`.config/sway`](https://github.com/leonzwrx/dotfiles/tree/master/.config/sway)  
+- [`.config/swayidle`](https://github.com/leonzwrx/dotfiles/tree/master/.config/swayidle)  
+- [`.config/swaylock`](https://github.com/leonzwrx/dotfiles/tree/master/.config/swaylock)  
+- [`.config/swayr`](https://github.com/leonzwrx/dotfiles/tree/master/.config/swayr)  
+- [`.config/waybar`](https://github.com/leonzwrx/dotfiles/tree/master/.config/waybar)  
 
 ---
 
