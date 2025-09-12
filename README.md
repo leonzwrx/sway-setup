@@ -17,7 +17,7 @@ This repo provides **setup scripts, instructions, and screenshots** to quickly r
 
 ## 🙏 Inspiration & Credits
 
-* **Ubuntu Sway Remix** – Huge thanks for the inspiration and base ideas.
+* **[Ubuntu Sway Remix](https://github.com/Ubuntu-Sway)** – Huge thanks for the inspiration and base ideas.
 * **SwayWM, Waybar, and the wider Linux community** – for the incredible tools.
 * Everyone sharing configs and scripts on GitHub and r/unixporn.
 
@@ -47,6 +47,16 @@ Here are the most relevant folders for this setup:
 
 ---
 
+## Included Scripts:
+* sway-install_debian.sh - Debian installer script
+* sway-install_fedora.sh - Fedora installer script (on top of vanilla Fedora Sway Spin) UPDATE THE LINK
+* nwg-wrapper_debian.sh - installs Wayland-friendly script output wrapper from source (Fedora should have these in official repos)
+* [OPTIONAL] rofi-wayland_debian.sh - installs Wayland fork of Rofi from source on Debian. Standard rofi should now work in Wayland
+* [OPTIONAL] sway-input-configurator_debian.sh - installs SWAY input manager for keyboards, touchpad, etc from source. Can be installed using pipx
+* sway-systemd.sh - #installs sway-systemd, which allows easy systemd service integration for SWAY from source [UPDATE THE LINK]
+* wttrbar.sh - installs wttr bar (for waybar) from source
+* /resources - other files referenced by scripts
+
 ## 🚀 Installation
 
 ### 1. Clone this repo
@@ -60,11 +70,14 @@ cd sway-setup
 **Debian (trixie):**
 
 ```
-./install-debian.sh
+./scripts/sway-install_debian.sh
 ```
 
 **Fedora (Sway Spin):**
 
 ```
-./install-fedora.sh
+./scripts/sway-install_fedora.sh
 ```
+
+### 3. Configure and customize [check link]
+* [post-install-configs_sway.md](../post-install-configs_sway.md) - tasks and checklists after the install

@@ -1,0 +1,10 @@
+[Unit]
+Description=Toggle idle inhibition depending on whether the audio is playing or not
+
+[Service]
+ExecStart=/home/leo/.config/sway/scripts/idle-inhibitor.sh
+Restart=always
+RestartSec=180
+
+[Install]
+WantedBy=sway-session.target
