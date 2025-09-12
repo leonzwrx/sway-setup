@@ -1,5 +1,4 @@
 # 🪟 Sway setup
----
 
 A clean, minimal, and practical Sway window manager setup for both **Debian** and **Fedora** .  
 This repo provides **setup scripts, instructions, and screenshots** to quickly reproduce my desktop environment.
@@ -8,22 +7,16 @@ This repo provides **setup scripts, instructions, and screenshots** to quickly r
 ![sway_keybindings.png](./assets/sway_keybindings.png)![sway_rofi.png](./assets/sway_rofi.png)
 ![sway-debian13.png](./assets/sway-debian13.png)
 
----
-
 ## 🔗 Related Repositories
 
 - 📂 [Dotfiles](https://github.com/leonzwrx/dotfiles) – all configuration files (Sway, Waybar, swayidle, swaylock, gtklock, etc.)  
 - ⚙️ [Linux Setup Scripts](https://github.com/leonzwrx/linux-setup-scripts) – general install scripts, package installs and utilities  
-
----
 
 ## 🙏 Inspiration & Credits
 
 * **[Ubuntu Sway Remix](https://github.com/Ubuntu-Sway)** – Huge thanks for the inspiration and base ideas.
 * **SwayWM, Waybar, and the wider Linux community** – for the incredible tools.
 * Everyone sharing configs and scripts on GitHub and r/unixporn.
-
----
 
 ## 🖥️ Platforms
 
@@ -34,8 +27,6 @@ This setup works on both **Debian** and **Fedora**:
 
 ⚠️ While installation steps differ, the **configs are identical**, so the look & feel remains consistent across both distros.
 
----
-
 ## ✨ Highlights
 
 * **Core Sway stack** → sway, waybar, swaylock/gtklock, swayidle, notifications (mako), launcher (wofi).
@@ -44,8 +35,6 @@ This setup works on both **Debian** and **Fedora**:
 * **User services** → systemd-managed Waybar, swayidle, swayrd.
  **Optional extras** → printing, Bluetooth, rofi-wayland fork.
 * **Display manager** → SDDM for login.
-
----
 
 ## 📂 Configurations
 
@@ -63,8 +52,6 @@ Here are the most relevant folders for this setup:
 - [`.config/swayr`](https://github.com/leonzwrx/dotfiles/tree/master/.config/swayr)  
 - [`.config/waybar`](https://github.com/leonzwrx/dotfiles/tree/master/.config/waybar)  
 
----
-
 ## Included Scripts:
 * sway-install_debian.sh - Debian installer script
 * sway-install_fedora.sh - Fedora installer script (on top of vanilla Fedora Sway Spin) UPDATE THE LINK
@@ -74,7 +61,6 @@ Here are the most relevant folders for this setup:
 * sway-systemd.sh - installs sway-systemd, which allows easy systemd service integration for SWAY from source [UPDATE THE LINK]
 * wttrbar.sh - installs wttr bar (for waybar) from source
 * /resources - other files referenced by scripts
-
 
 ## 🚀 Installation
 
@@ -99,4 +85,4 @@ cd sway-setup
 ```
 
 ### 3. Configure and customize [check link]
-* [post-install-configs_sway.md](../post-install-configs_sway.md) - tasks and checklists after the install
+* [post-install-configs_sway.md](https://github.com/leonzwrx/sway-setup/blob/main/post-install-configs_sway.md) - tasks and checklists after the install
