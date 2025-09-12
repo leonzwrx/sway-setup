@@ -1,6 +1,6 @@
 # Sway Setup
 
-A clean, minimal, and practical Sway window manager setup for both **Debian (trixie)** and **Fedora**.  
+A clean, minimal, and practical Sway window manager setup for both **Debian** and **Fedora** .  
 This repo provides **setup scripts, instructions, and screenshots** to quickly reproduce my desktop environment.
 
 ![fedora42_sway.png](./assets/fedora42_sway.png)
@@ -28,7 +28,7 @@ This repo provides **setup scripts, instructions, and screenshots** to quickly r
 This setup works on both **Debian** and **Fedora**:
 
 - **Debian (trixie)** – installed manually on top of a **minimal base system**.  
-- **Fedora** – based on the official **Fedora Sway Spin**.  
+- **Fedora** (currently v42) – based on the official **Fedora Sway Spin**.  
 
 ⚠️ While installation steps differ, the **configs are identical**, so the look & feel remains consistent across both distros.
 

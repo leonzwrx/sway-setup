@@ -31,7 +31,7 @@ userhome="/home/$username"
 ##################################
 
 prepare_environment() {
-    cd $userhome/Downloads/linux-setup-scripts
+    cd $userhome/Downloads/sway-setup/scripts
     chmod +x *.sh
 }
 
@@ -42,9 +42,9 @@ install_sway_packages() {
     # Autotiling
     sudo pip install autotiling
 
-    # Install nwg-look
-    if [ -f $userhome/Downloads/linux-setup-scripts/nwg-look.sh ]; then
-        bash $userhome/Downloads/linux-setup-scripts/nwg-look.sh
+    # Install nwg-look - UPDATE
+    if [ -f $userhome/Downloads/sway-setup/scripts/nwg-look.sh ]; then
+        bash $userhome/Downloads/sway-setup/scripts/nwg-look.sh
     fi
 
     # Networking and bluetooth
@@ -57,7 +57,7 @@ install_sway_packages() {
     sudo dnf install -y qt5-qtstyleplugins qt5ct qt6ct papirus-icon-theme kvantum
     #Install Nord-Kvantum theme
     mkdir -p $userhome/.config/Kvantum
-    tar -xzf "$userhome/Downloads/linux-setup-scripts/resources/Nord-Kvantum.tar.gz" -C $userhome/.config/Kvantum
+    tar -xzf "$userhome/Downloads/sway-setup/resources/Nord-Kvantum.tar.gz" -C $userhome/.config/Kvantum
 
     # More Sway utilities
     sudo dnf install -y rofi-wayland foot ffmpegthumbnailer jq khal mako tumbler waybar xsettingsd xdg-desktop-portal-wlr python3-send2trash inotify-tools kanshi
@@ -69,7 +69,7 @@ install_sway_packages() {
 install_manual_sway_packages() {
   # wttrbar - Could not get the script to dynamically download the latest version. This script downloads a specific version (can change in the script).
     # Alternative solution, download the binary from https://github.com/bjesus/wttrbar/releases/latest and place into /usr/bin manually
-    cd $userhome/Downloads/linux-setup-scripts/
+    cd $userhome/Downloads/sway-setup/scripts
     sudo bash wttrbar.sh
 
     # Azote for backgrounds - Manually moved .desktop and icon from azote/dist folder
@@ -77,13 +77,6 @@ install_manual_sway_packages() {
     git clone https://github.com/nwg-piotr/azote.git
     cd azote
     sudo python3 setup.py install
-
-    # OPTIONAL - if rofi-wayland has to be manually installed:
-    #cd $userhome/SourceBuilds
-    #git clone https://github.com/lbonn/rofi.git
-    #cd rofi
-    #meson setup build && ninja -C build
-    #sudo ninja -C build install
 
     # swayr
     cargo install swayr
@@ -110,7 +103,7 @@ install_manual_sway_packages() {
     sudo bash install.sh
 
     #[OPTIONAL] Uncomment to copy .desktop files for manually installed applications
-    #sudo cp $userhome/Downloads/linux-setup-scripts/resources/*.desktop /usr/share/applications
+    #sudo cp $userhome/Downloads/sway-setup/scripts/resources/*.desktop /usr/share/applications
 
 }
 
@@ -118,20 +111,24 @@ install_custom_systemd_services() {
     # Install custom systemd user services
     # Ensure script has write permissions (optional)
     # chmod +w $userhome/.config/systemd/user  # Uncomment if needed
-    cd "$userhome/Downloads/linux-setup-scripts/resources"  # Double quotes for safety
+    cd "$userhome/Downloads/sway-setup/resources"  # Double quotes for safety
     
     # Check if directory exists (avoid overwriting data accidentally)
     if [[ -d "$userhome/.config/systemd/user" ]]; then
     # Copy service files with verbose output
-      cp -v swayidle-inhibitor.service "$userhome/.config/systemd/user"
+      cp -v swayidle-inhibit.service "$userhome/.config/systemd/user"
+      cp -v swayidle.service "$userhome/.config/systemd/user"
       cp -v waybar.service "$userhome/.config/systemd/user"
+      cp -v swayrd "$userhome/.config/systemd/user"
     else
       echo "Warning: Directory ~/.config/systemd/user does not exist. Skipping copy."
     fi
 
 sudo systemctl daemon-reload  # Reload systemd
 systemctl --user enable waybar.service --now
-systemctl --user enable swayidle-inhibitor.service --now
+systemctl --user enable swayrd.service --now
+systemctl --user enable swayidle.service --now
+systemctl --user enable swayidle-inhibit.service --now
 
 
 final_cleanup() {

@@ -16,9 +16,7 @@ This document is my basic checklist for configuring and customizing my SWAY WM o
 ### Verifying Functionality and Base Configuration
 
 * Ensure all core Sway functions are running smoothly
-	- Test with 
-	```bash 
-	swaymsg -r get_workspaces
+	- Test with `swaymsg -r get_workspaces` 
 * Verify `rofi` launches successfully (wofi or another launcher can serve as a backup).
 * Check if installed fonts (Nerd Fonts/glyphs) work as expected in Waybar and other applications.
 * Review `nwg-displays` configuration and verify resolution settings.
@@ -71,17 +69,13 @@ Qt5ct:
 Kvantum Manager:
 
 ![kvantum.png](./assets/kvantum.png)
+
 ### Waybar Configuration
 
 * Double-check all Waybar icons for appearance and functionality. Ensure variables in config files are set correctly and nothing is missing.
 * Verify alignment and borders are configured as desired
 
-### REVISIT - Source Installation Adjustments
-
-* For applications built from source (e.g., Azote, nwg-look), icons and `.desktop` files might need t o be manually copied from the source folder to `/usr/share/applications` and `/usr/share/pixmaps`.
-* For applications like Rofi, where themes are expected in `/usr/share`, move them from `/usr/local/share/rofi`
-
-### Issues to troubleshoot
+### Issues to troubleshoot:
 
 ### Additional Verifications
 * Review keyboard/input settings.

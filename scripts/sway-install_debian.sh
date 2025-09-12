@@ -45,7 +45,7 @@ sudo apt install -y qt5ct qt6ct papirus-icon-theme qt-style-kvantum qt-style-kva
 echo "Installing Nord-Kvantum theme..."
 mkdir -p "$HOME/.config/Kvantum"
 # Using a more robust tar command that handles nested directories better
-tar -xzvf "$HOME/Downloads/linux-setup-scripts/resources/Nord-Kvantum.tar.gz" -C "$HOME/.config/Kvantum"
+tar -xzvf "$HOME/Downloads/sway-setup/scripts/resources/Nord-Kvantum.tar.gz" -C "$HOME/.config/Kvantum"
 
 ## --- Pipx Tools ---
 
@@ -72,27 +72,49 @@ sudo apt install -y foot ffmpegthumbnailer khal tumbler xsettingsd xdg-desktop-p
 
 # Manual source installations (assuming scripts exist in the same directory)
 echo "Installing wttrbar from source..."
-bash "$HOME/Downloads/linux-setup-scripts/wttrbar.sh"
+bash "$HOME/Downloads/sway-setup/scripts/wttrbar.sh"
 
 echo "Installing nwg-wrapper from source..."
-bash "$HOME/Downloads/linux-setup-scripts/nwg-wrapper_debian.sh"
+bash "$HOME/Downloads/sway-setup/scripts/nwg-wrapper_debian.sh"
 
 echo "Installing sway-systemd from source..."
-bash "$HOME/Downloads/linux-setup-scripts/sway-systemd.sh"
-
-# swayr
+bash "$HOME/Downloads/sway-setup/scripts/sway-systemd.sh" # swayr
 cargo install swayr
 cargo install cargo-update
 
 # Optional: Rofi-wayland fork
-# bash "$HOME/Downloads/linux-setup-scripts/rofi-wayland_debian.sh"
+# bash "$HOME/Downloads/sway-setup/scripts/rofi-wayland_debian.sh"
+
+
+# Install custom systemd user services
+# Ensure script has write permissions (optional)
+# chmod +w $userhome/.config/systemd/user  # Uncomment if needed
+cd "$userhome/Downloads/sway-setup/resources"  # Double quotes for safety
+
+# Check if directory exists (avoid overwriting data accidentally)
+if [[ -d "$userhome/.config/systemd/user" ]]; then
+# Copy service files with verbose output
+  cp -v swayidle-inhibit.service "$userhome/.config/systemd/user"
+  cp -v swayidle.service "$userhome/.config/systemd/user"
+  cp -v waybar.service "$userhome/.config/systemd/user"
+  cp -v swayrd "$userhome/.config/systemd/user"
+else
+  echo "Warning: Directory ~/.config/systemd/user does not exist. Skipping copy."
+fi
+
+sudo systemctl daemon-reload  # Reload systemd
+systemctl --user enable waybar.service --now
+systemctl --user enable swayrd.service --now
+systemctl --user enable swayidle.service --now
+systemctl --user enable swayidle-inhibit.service --now
+
 
 # Install SDDM Display Manager
 sudo apt install --no-install-recommends -y sddm
 sudo systemctl enable sddm
 
 # Optional: Uncomment to copy .desktop files
-# sudo cp "$HOME/Downloads/linux-setup-scripts/resources/"*.desktop /usr/share/applications/
+# sudo cp "$HOME/Downloads/sway-setup/resources/"*.desktop /usr/share/applications/
 
 ## --- Cleanup ---
 
