@@ -9,7 +9,7 @@
 #
 # - This script will install Sway on Debian Trixie
 # - Start with minimal fresh Debian install (run debian_base_trixie.sh first)
-# - Make sure this repo is cloned into $userhome/Downloads
+# - Make sure this repo is cloned into $HOME/Downloads
 # - After running this script, clone/copy dotfiles to make sure sway/waybar customization gets copied
 
 # Exit immediately if a command exits with a non-zero status
@@ -78,7 +78,9 @@ echo "Installing nwg-wrapper from source..."
 bash "$HOME/Downloads/sway-setup/scripts/nwg-wrapper_debian.sh"
 
 echo "Installing sway-systemd from source..."
-bash "$HOME/Downloads/sway-setup/scripts/sway-systemd.sh" # swayr
+bash "$HOME/Downloads/sway-setup/scripts/sway-systemd.sh" 
+
+# swayr
 cargo install swayr
 cargo install cargo-update
 
@@ -88,25 +90,25 @@ cargo install cargo-update
 
 # Install custom systemd user services
 # Ensure script has write permissions (optional)
-# chmod +w $userhome/.config/systemd/user  # Uncomment if needed
-cd "$userhome/Downloads/sway-setup/resources"  # Double quotes for safety
+# chmod +w $HOME/.config/systemd/user  # Uncomment if needed
+cd "$HOME/Downloads/sway-setup/resources"
 
 # Check if directory exists (avoid overwriting data accidentally)
-if [[ -d "$userhome/.config/systemd/user" ]]; then
+if [[ -d "$HOME/.config/systemd/user" ]]; then
 # Copy service files with verbose output
-  cp -v swayidle-inhibit.service "$userhome/.config/systemd/user"
-  cp -v swayidle.service "$userhome/.config/systemd/user"
-  cp -v waybar.service "$userhome/.config/systemd/user"
-  cp -v swayrd "$userhome/.config/systemd/user"
+  cp -v swayidle-inhibit.service "$HOME/.config/systemd/user"
+  cp -v swayidle.service "$HOME/.config/systemd/user"
+  cp -v waybar.service "$HOME/.config/systemd/user"
+  cp -v swayrd.service "$HOME/.config/systemd/user"
 else
   echo "Warning: Directory ~/.config/systemd/user does not exist. Skipping copy."
 fi
 
 sudo systemctl daemon-reload  # Reload systemd
-systemctl --user enable waybar.service --now
-systemctl --user enable swayrd.service --now
-systemctl --user enable swayidle.service --now
-systemctl --user enable swayidle-inhibit.service --now
+systemctl --user enable waybar.service
+systemctl --user enable swayrd.service
+systemctl --user enable swayidle.service
+systemctl --user enable swayidle-inhibit.service
 
 
 # Install SDDM Display Manager
