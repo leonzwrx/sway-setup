@@ -41,7 +41,7 @@ install_sway_packages() {
     # Autotiling
     pipx install autotiling
 
-    # OPTION - rofimoji using pipx in case rofi-wayland doesn't work
+    # OPTIONAL - rofimoji using pipx in case rofi-wayland doesn't work
     # pipx install rofimoji
 
     # Networking and bluetooth
@@ -63,11 +63,11 @@ install_sway_packages() {
     sudo dnf install -y foot ffmpegthumbnailer jq khal mako tumbler waybar xsettingsd xdg-desktop-portal-wlr \
     python3-send2trash inotify-tools kanshi mako wofi Xwayland wlsunset wtype
 
-    OPTIONAL Emoji selector - has a rofi-wayland requirement. 
-    Installing using pipx instead
+    # OPTIONAL Emoji selector - has a rofi-wayland requirement. 
+    # 
     sudo dnf install -y rofimoji
 
-    #nwg-piotr packages from main reposs
+    #nwg-piotr packages from main repos
     sudo dnf install -y nwg-bar nwg-wrapper
 
 }
@@ -91,6 +91,7 @@ install_manual_sway_packages() {
 
     #nwg-clipman from source (not available in standard repos)
     mkdir -p  $HOME/SourceBuilds && cd $HOME/SourceBuilds
+    rm -rf $HOME/SourceBuilds/nwg-clipman
     git clone https://github.com/nwg-piotr/nwg-clipman.git
     cd nwg-clipman/
     sudo ./install.sh 
