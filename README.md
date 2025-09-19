@@ -1,7 +1,8 @@
 # 🪟 Sway setup
 
+![Sway WM](https://img.shields.io/badge/Window%20Manager-Sway-45A049?style=for-the-badge&logo=sway&logoColor=white)
 A clean, minimal, and practical Sway window manager setup for both **Debian** and **Fedora** .  
-This repo provides **setup scripts, instructions, and screenshots** to quickly reproduce my desktop environment.
+This repo provides **setup scripts, instructions, and screenshots** to quickly reproduce my desktop environment. This is a sensible Sway configuration with quality-of-life tweaks
 
 ![fedora42_sway.png](./assets/fedora42_sway.png)
 ![sway_keybindings.png](./assets/sway_keybindings.png)![sway_rofi.png](./assets/sway_rofi.png)
@@ -20,6 +21,9 @@ This repo provides **setup scripts, instructions, and screenshots** to quickly r
 
 ## 🖥️ Platforms
 
+![Made for Debian](https://img.shields.io/badge/Made%20for-Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)
+![Made for Fedora](https://img.shields.io/badge/Made%20for-Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white)
+
 This setup works on both **Debian** and **Fedora**:
 
 - **Debian (trixie)** – installed manually on top of a **minimal base system**.  
@@ -29,11 +33,11 @@ This setup works on both **Debian** and **Fedora**:
 
 ## ✨ Highlights
 
-* **Core Sway stack** → sway, waybar, swaylock/gtklock, swayidle, notifications (mako), launcher (wofi).
-* **Theming** → Papirus icons + Nord-Kvantum Qt theme.
+* **Core Sway stack** → sway, waybar, swaylock/gtklock, swayidle, notifications (mako), launcher (rofi & wofi).
+* **Theming** → Papirus icons + Nord-Kvantum Qt theme, custom Waybar styling & configs
 * **Utilities** → clipboard managers, screenshots, autotiling, foot terminal, weather bar, calendar, sunset tool, and more.
 * **User services** → systemd-managed Waybar, swayidle, swayrd.
- **Optional extras** → printing, Bluetooth, rofi-wayland fork.
+* **Optional extras** → printing, Bluetooth, [auto-cpufreq](https://github.com/AdnanHodzic/auto-cpufreq) for laptops.
 * **Display manager** → SDDM for login.
 
 ## 📂 Configurations
@@ -66,7 +70,7 @@ Here are the most relevant folders for this setup:
 
 ### 1. Clone this repo
 ```bash
-git clone https://github.com/leonzwrx/sway-setup.git
+git clone https://github.com/leonzwrx/sway-setup.git ~/Downloads/sway-setup
 cd sway-setup
 ```
 

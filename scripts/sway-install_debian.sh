@@ -93,18 +93,17 @@ cargo install cargo-update
 # chmod +w $HOME/.config/systemd/user  # Uncomment if needed
 cd "$HOME/Downloads/sway-setup/resources"
 
-# Check if directory exists (avoid overwriting data accidentally)
-if [[ -d "$HOME/.config/systemd/user" ]]; then
-# Copy service files with verbose output
-  cp -v swayidle-inhibit.service "$HOME/.config/systemd/user"
-  cp -v swayidle.service "$HOME/.config/systemd/user"
-  cp -v waybar.service "$HOME/.config/systemd/user"
-  cp -v swayrd.service "$HOME/.config/systemd/user"
-else
-  echo "Warning: Directory ~/.config/systemd/user does not exist. Skipping copy."
-fi
 
-sudo systemctl daemon-reload  # Reload systemd
+# Ensure systemd user directory exists
+mkdir -p "$HOME/.config/systemd/user"
+
+# Copy service files with verbose output
+cp -v swayidle-inhibit.service "$HOME/.config/systemd/user/"
+cp -v swayidle.service "$HOME/.config/systemd/user/"
+cp -v waybar.service "$HOME/.config/systemd/user/"
+cp -v swayrd.service "$HOME/.config/systemd/user/"
+
+systemctl --user daemon-reload  # Reload systemd
 systemctl --user enable waybar.service
 systemctl --user enable swayrd.service
 systemctl --user enable swayidle.service

@@ -7,7 +7,7 @@
                              
 ```                                                    
 
-# Sway Post-Install guide
+# 🪟 Sway Post-Install guide
 
 _UPDATED August 2025_
 
