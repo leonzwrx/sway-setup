@@ -41,8 +41,8 @@ install_sway_packages() {
     # Autotiling
     pipx install autotiling
 
-    # rofimoji using pipx because the standard repo has a package that needs rofi-wayland but sticking with regular rofi
-    pipx install rofimoji
+    # OPTION - rofimoji using pipx in case rofi-wayland doesn't work
+    # pipx install rofimoji
 
     # Networking and bluetooth
     sudo dnf install -y blueman nm-connection-editor NetworkManager-tui network-manager-applet nm-connection-editor-desktop NetworkManager 
@@ -60,18 +60,16 @@ install_sway_packages() {
     tar -xzvf "$HOME/Downloads/sway-setup/resources/Nord-Kvantum.tar.gz" -C "$HOME/.config/Kvantum"
 
     # More Sway utilities and related Wayland packages
-    sudo dnf install -y rofi foot ffmpegthumbnailer jq khal mako tumbler waybar xsettingsd xdg-desktop-portal-wlr \
+    sudo dnf install -y foot ffmpegthumbnailer jq khal mako tumbler waybar xsettingsd xdg-desktop-portal-wlr \
     python3-send2trash inotify-tools kanshi mako wofi Xwayland wlsunset wtype
 
-    #OPTIONAL Emoji selector - has a rofi-wayland requirement. 
-    #Installing using pipx instead
-    #sudo dnf install -y rofimoji
+    OPTIONAL Emoji selector - has a rofi-wayland requirement. 
+    Installing using pipx instead
+    sudo dnf install -y rofimoji
 
     #nwg-piotr packages from main reposs
     sudo dnf install -y nwg-bar nwg-wrapper
 
-    # Optional: rofi-wayland fork in case standard package does not work
-    # sudo dnf install -y rofi-wayland
 }
 
 install_manual_sway_packages() {
