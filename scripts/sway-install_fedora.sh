@@ -91,7 +91,7 @@ install_manual_sway_packages() {
 
     #nwg-clipman from source (not available in standard repos)
     mkdir -p  $HOME/SourceBuilds && cd $HOME/SourceBuilds
-    rm -rf $HOME/SourceBuilds/nwg-clipman
+    sudo -y rm -rf $HOME/SourceBuilds/nwg-clipman
     git clone https://github.com/nwg-piotr/nwg-clipman.git
     cd nwg-clipman/
     sudo ./install.sh 

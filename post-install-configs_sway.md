@@ -18,6 +18,7 @@ This document is my basic checklist for configuring and customizing my SWAY WM o
 * Ensure all core Sway functions are running smoothly
 	- Test with `swaymsg -r get_workspaces` 
 * Verify `rofi` launches successfully (wofi or another launcher can serve as a backup).
+* Go through user services by reviewing `systemctl --user list-unit-files` and enable any services that might need to be enabled such as  `foot-server.servier` and `waybar.service`
 * Check if installed fonts (Nerd Fonts/glyphs) work as expected in Waybar and other applications.
 * Review `nwg-displays` configuration and verify resolution settings.
 * Confirm Sway scripts for autotiling, volume control, workspace switching, etc. are working properly
