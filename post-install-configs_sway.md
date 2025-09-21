@@ -8,8 +8,8 @@
 ```                                                    
 
 # 🪟 Sway Post-Install guide
-
-_UPDATED August 2025_
+![Sway WM](https://img.shields.io/badge/Window%20Manager-Sway-45A049?style=for-the-badge&logo=sway&logoColor=white)![Made for Debian](https://img.shields.io/badge/Made%20for-Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)![Made for Fedora](https://img.shields.io/badge/Made%20for-Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white)
+_UPDATED September 2025_
 
 This document is my basic checklist for configuring and customizing my SWAY WM on Debian stable and Fedora Sway Spin
 

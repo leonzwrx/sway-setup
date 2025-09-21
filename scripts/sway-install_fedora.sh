@@ -53,11 +53,9 @@ install_sway_packages() {
     # Theming
     sudo dnf install -y qt5-qtstyleplugins qt5ct qt6ct papirus-icon-theme kvantum
 
-    #Nord-Kvantum theme
-    echo "Installing Nord-Kvantum theme..."
+    echo "Installing Utterly-Nord Kvantum theme..."
     mkdir -p "$HOME/.config/Kvantum"
-    # Using a more robust tar command that handles nested directories better
-    tar -xzvf "$HOME/Downloads/sway-setup/resources/Nord-Kvantum.tar.gz" -C "$HOME/.config/Kvantum"
+    tar -xzvf "$HOME/Downloads/sway-setup/resources/Utterly-Nord-Solid-kvantum.zip" -C "$HOME/.config/Kvantum"
 
     # More Sway utilities and related Wayland packages
     sudo dnf install -y foot ffmpegthumbnailer jq khal mako tumbler waybar xsettingsd xdg-desktop-portal-wlr \

@@ -42,10 +42,9 @@ sudo apt install -y qt5ct qt6ct papirus-icon-theme qt-style-kvantum qt-style-kva
 
 ## --- Manual Theming Installations ---
 
-echo "Installing Nord-Kvantum theme..."
+echo "Installing Utterly-Nord Kvantum theme..."
 mkdir -p "$HOME/.config/Kvantum"
-# Using a more robust tar command that handles nested directories better
-tar -xzvf "$HOME/Downloads/sway-setup/resources/Nord-Kvantum.tar.gz" -C "$HOME/.config/Kvantum"
+tar -xzvf "$HOME/Downloads/sway-setup/resources/Utterly-Nord-Solid-kvantum.zip" -C "$HOME/.config/Kvantum"
 
 ## --- Pipx Tools ---
 

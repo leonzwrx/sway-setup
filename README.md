@@ -1,4 +1,15 @@
+```bash
+ _     _____ ___  _   _ _____
+| |   | ____/ _ \| \ | |__  /
+| |   |  _|| | | |  \| | / / 
+| |___| |__| |_| | |\  |/ /_ 
+|_____|_____\___/|_| \_/____|
+                             
+```               
+
 # 🪟 Sway setup
+
+_UPDATED September 2025_
 
 ![Sway WM](https://img.shields.io/badge/Window%20Manager-Sway-45A049?style=for-the-badge&logo=sway&logoColor=white)
 A clean, minimal, and practical Sway window manager setup for both **Debian** and **Fedora** .  
@@ -21,8 +32,7 @@ This repo provides **setup scripts, instructions, and screenshots** to quickly r
 
 ## 🖥️ Platforms
 
-![Made for Debian](https://img.shields.io/badge/Made%20for-Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)
-![Made for Fedora](https://img.shields.io/badge/Made%20for-Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white)
+![Made for Debian](https://img.shields.io/badge/Made%20for-Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)![Made for Fedora](https://img.shields.io/badge/Made%20for-Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white)
 
 This setup works on both **Debian** and **Fedora**:
 
@@ -56,7 +66,7 @@ Here are the most relevant folders for this setup:
 - [`.config/swayr`](https://github.com/leonzwrx/dotfiles/tree/master/.config/swayr)  
 - [`.config/waybar`](https://github.com/leonzwrx/dotfiles/tree/master/.config/waybar)  
 
-## Included Scripts:
+## 📜Included Scripts:
 * sway-install_debian.sh - Debian installer script
 * sway-install_fedora.sh - Fedora installer script (on top of vanilla Fedora Sway Spin) UPDATE THE LINK
 * nwg-wrapper_debian.sh - installs Wayland-friendly script output wrapper from source (Fedora should have these in official repos)
