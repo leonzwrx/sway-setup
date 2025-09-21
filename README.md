@@ -8,10 +8,10 @@
 ```               
 
 # 🪟 Sway setup
+![Sway WM](https://img.shields.io/badge/Window%20Manager-Sway-45A049?style=for-the-badge&logo=sway&logoColor=white)
 
 _UPDATED September 2025_
 
-![Sway WM](https://img.shields.io/badge/Window%20Manager-Sway-45A049?style=for-the-badge&logo=sway&logoColor=white)
 A clean, minimal, and practical Sway window manager setup for both **Debian** and **Fedora** .  
 This repo provides **setup scripts, instructions, and screenshots** to quickly reproduce my desktop environment. This is a sensible Sway configuration with quality-of-life tweaks
 
