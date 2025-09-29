@@ -67,7 +67,9 @@ _JAVA_AWT_WM_NONREPARENTING=1
 ```
 
 Qt5ct:
+
 ![qt5ct.png](./assets/qt5ct.png)
+
 Kvantum Manager:
 
 ![kvantum.png](./assets/kvantum.png)
