@@ -8,7 +8,7 @@
 ```                                                    
 
 # 🪟 Sway Post-Install guide
-![Sway WM](https://img.shields.io/badge/Window%20Manager-Sway-45A049?style=for-the-badge&logo=sway&logoColor=white)![Made for Debian](https://img.shields.io/badge/Made%20for-Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)![Made for Fedora](https://img.shields.io/badge/Made%20for-Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white)
+![Sway WM](https://img.shields.io/badge/Sway-Wayland-5294E2?style=for-the-badge&logo=wayland&logoColor=white)![Made for Debian](https://img.shields.io/badge/Made%20for-Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)![Made for Fedora](https://img.shields.io/badge/Made%20for-Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white)
 
 _UPDATED September 2025_
 

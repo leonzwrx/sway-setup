@@ -8,7 +8,7 @@
 ```               
 
 # 🪟 Sway setup
-![Sway WM](https://img.shields.io/badge/Window%20Manager-Sway-45A049?style=for-the-badge&logo=sway&logoColor=white)
+![Sway WM](https://img.shields.io/badge/Sway-Wayland-5294E2?style=for-the-badge&logo=wayland&logoColor=white)
 
 _UPDATED September 2025_
 
