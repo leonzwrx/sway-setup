@@ -17,9 +17,10 @@ This repo provides **setup scripts, instructions, and screenshots** to quickly r
 
 ![fedora42_sway.png](./assets/fedora42_sway.png)
 ![sway_keybindings.png](./assets/sway_keybindings.png)![sway_rofi.png](./assets/sway_rofi.png)
+
 ![sway-debian13.png](./assets/sway-debian13.png)
 
-## 🔗 Related Repositories
+## 🔗 related repositories
 
 - 📂 [Dotfiles](https://github.com/leonzwrx/dotfiles) – all configuration files (Sway, Waybar, swayidle, swaylock, gtklock, etc.)  
 - ⚙️ [Linux Setup Scripts](https://github.com/leonzwrx/linux-setup-scripts) – general install scripts, package installs and utilities  
@@ -98,5 +99,5 @@ cd sway-setup
 ./scripts/sway-install_fedora.sh
 ```
 
-### 3. Configure and customize [check link]
+### 3. Configure and customize
 * [post-install-configs_sway.md](https://github.com/leonzwrx/sway-setup/blob/main/post-install-configs_sway.md) - tasks and checklists after the install

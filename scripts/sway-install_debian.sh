@@ -46,6 +46,14 @@ echo "Installing Utterly-Nord Kvantum theme..."
 mkdir -p "$HOME/.config/Kvantum"
 tar -xzvf "$HOME/Downloads/sway-setup/resources/Utterly-Nord-Solid-kvantum.zip" -C "$HOME/.config/Kvantum"
 
+echo "Installing additional rofi themes"
+cd $HOME/Downloads
+git clone https://github.com/lr-tech/rofi-themes-collection.git
+cd rofi-themes-collection
+mkdir -p $HOME/.local/share/rofi/themes/
+cp -r themes/rounded-nord-dark.rasi $HOME/.local/share/rofi/themes/
+cp -r themes/template/ $HOME/.local/share/rofi/themes/
+
 ## --- Pipx Tools ---
 
 echo "Installing Python tools with pipx..."

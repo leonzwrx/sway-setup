@@ -57,6 +57,14 @@ install_sway_packages() {
     mkdir -p "$HOME/.config/Kvantum"
     tar -xzvf "$HOME/Downloads/sway-setup/resources/Utterly-Nord-Solid-kvantum.zip" -C "$HOME/.config/Kvantum"
 
+    echo "Installing additional rofi themes"
+    cd $HOME/Downloads
+    git clone https://github.com/lr-tech/rofi-themes-collection.git
+    cd rofi-themes-collection
+    mkdir -p $HOME/.local/share/rofi/themes/
+    cp -r themes/rounded-nord-dark.rasi $HOME/.local/share/rofi/themes/
+    cp -r themes/template/ $HOME/.local/share/rofi/themes/
+
     # More Sway utilities and related Wayland packages
     sudo dnf install -y foot ffmpegthumbnailer jq khal mako tumbler waybar xsettingsd xdg-desktop-portal-wlr \
     python3-send2trash inotify-tools kanshi mako wofi Xwayland wlsunset wtype
